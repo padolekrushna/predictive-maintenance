@@ -38,11 +38,6 @@ The web application should meet the following non-functional requirements:
 - The web application should be responsive and easy to use.
 - The web application should be secure and protect user data.
 
-### 4.3 Constraints
-
-- The application should be built using FastAPI and Streamlit and deployed using Docker and Digital Ocean droplets.
-- The cost of deployment should be minimal.
-
 ### 4.4 Out-of-scope
 
 - Integrating with external applications or data sources.
@@ -83,8 +78,6 @@ The frontend will interact with the backend server through API calls to request 
 ## 7. Pipeline
 ---
 
-![Project Pipeline](assets/pipeline.png)
-
 The MLOps (Machine Learning Operations) pipeline project is designed to create an end-to-end workflow for developing and deploying a web application that performs data preprocessing, model training, model evaluation, and prediction. The pipeline leverages Docker containers for encapsulating code, artifacts, and both the frontend and backend components of the application. The application is deployed on a DigitalOcean droplet to provide a cloud hosting solution.
 
 The pipeline follows the following sequence of steps:
@@ -111,7 +104,5 @@ The pipeline follows the following sequence of steps:
 
 
 ## 8. Conclusion
-
-[Click here](http://64.227.150.232:8501/)  to use the web application.
 
 This design doc outlines the development of a web application for predictive maintenance using a synthetic dataset. The application will utilize a machine learning model that identifies equipment failures based on process parameters, including air and process temperatures, rotational speed, torque, and tool wear. The web application will be built using FastAPI and Streamlit and deployed using Docker and Digital Ocean droplets.
