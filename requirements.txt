@@ -168,7 +168,6 @@ websocket-client==1.5.1
 Werkzeug==2.3.4
 widgetsnbextension==4.0.7
 zipp==3.15.0
-
 streamlit
 numpy
 pandas
@@ -178,3 +177,4 @@ seaborn
 plotly
 scipy
 imbalanced-learn
+pip>=24.3.1
