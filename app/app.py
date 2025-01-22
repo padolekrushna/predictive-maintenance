@@ -1,9 +1,22 @@
+import os
+import sys
+import subprocess
+
+# Ensure required modules are installed
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+try:
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.model_selection import train_test_split
+except ModuleNotFoundError:
+    install("scikit-learn")
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.model_selection import train_test_split
 
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
 
 st.title('Predictive Maintenance Application')
 st.write("This app predicts machine failure and its type using a synthetic dataset.")
@@ -48,7 +61,6 @@ Type_encoded = {'L': 0, 'M': 1, 'H': 2}[Type]
 input_data = [[Type_encoded, Rotational_speed, Torque, Tool_wear, Air_temp, Process_temp]]
 
 if st.button("Predict Machine Failure"):
-
     failure_prediction = rf_failure.predict(input_data)[0]
     failure_type_prediction = rf_failure_type.predict(input_data)[0]
 
