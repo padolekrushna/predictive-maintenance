@@ -42,7 +42,8 @@ Tool_wear = st.slider("Tool Wear [min]", float(X['Tool wear [min]'].min()), floa
 Air_temp = st.slider("Air Temperature [°C]", float(X['Air temperature [c]'].min()), float(X['Air temperature [c]'].max()))
 Process_temp = st.slider("Process Temperature [°C]", float(X['Process temperature [c]'].min()), float(X['Process temperature [c]'].max()))
 
-Type_encoded = {'L': 0, 'M': 1, 'H': 2}[Type]
+# Map the Type selection to numerical values
+Type_encoded = {'Low (L)': 0, 'Medium (M)': 1, 'High (H)': 2}[Type]
 
 input_data = [[Type_encoded, Rotational_speed, Torque, Tool_wear, Air_temp, Process_temp]]
 
